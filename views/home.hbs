@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" co ntent="ie=edge">
+    <title>Some Website</title>
+</head>
+<body>
+    {{> header}}
+    <h1>{{pageTitle}}</h1>
+    {{!-- 这里screamIt是我们定义的函数，传参数的方法直接用空格间隔 --}}
+    <p>{{screamIt welcomeMessage }}</p>
+    {{> footer}}
+</body>
+</html>
