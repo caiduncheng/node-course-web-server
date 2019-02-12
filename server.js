@@ -75,6 +75,12 @@ app.get('/bad', (req,res) => {
         errorMessage: 'Unable to handle request'
     });
 })
+
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Projects'
+    });
+})
 // listen将应用和机器的端口绑定在一起,接受两个参数，第一个是端口号，第二个位可选参数，是一个函数，当服务器启动后要做的事情
 app.listen(port, () => { // 用端口号3000，也是一个开发经常用的端口号
     console.log(`Server is up on port ${port}`)
