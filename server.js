@@ -5,6 +5,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || '3000'; // proccess.env里保存了系统的环境变量
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -75,7 +76,7 @@ app.get('/bad', (req,res) => {
     });
 })
 // listen将应用和机器的端口绑定在一起,接受两个参数，第一个是端口号，第二个位可选参数，是一个函数，当服务器启动后要做的事情
-app.listen(3000, () => { // 用端口号3000，也是一个开发经常用的端口号
-    console.log('Server is up on port 3000')
+app.listen(port, () => { // 用端口号3000，也是一个开发经常用的端口号
+    console.log(`Server is up on port ${port}`)
 });
 
